@@ -2,9 +2,11 @@
 
 public class MissionEntity : IMission
 {
-    // Timer
-    
-    // Preview Mission
-    
-    // Next Mission.
+    public Task RunAsync()
+    {
+#if DEBUG
+        Console.WriteLine("Doit");
+        return Task.CompletedTask;
+#endif
+    }
 }
