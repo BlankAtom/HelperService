@@ -2,5 +2,5 @@
 
 public interface IMission
 {
-    
+    Task RunAsync();
 }
