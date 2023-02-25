@@ -14,6 +14,7 @@ public class MissionManager : IMissionManager
     public MissionManager()
     {
         _centerTimer = new Timer(5000);
+        _collects = new List<IMissionCollect>();
         _nowTime = DateTime.Now;
         initTimer();
     }
@@ -45,7 +46,12 @@ public class MissionManager : IMissionManager
 
     public void CreateManagerCollection(IMission mission, long ms)
     {
-        
+        _collects.Add(new MissionCollect(mission, ms));
+    }
+
+    public void AddMission(int collectIndex, IMission mission){
+        if(collectIndex < _collects.Count)
+            _collects[collectIndex].AddMission(mission);
     }
 }
 
