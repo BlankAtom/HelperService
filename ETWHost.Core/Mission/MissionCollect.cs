@@ -3,7 +3,7 @@
 public class MissionCollect : IMissionCollect
 {
     /// Mission list
-    public List<IMission> Missions{ get; set; }
+    private List<IMission> Missions{ get; set; }
 
     private int _index = 0;
 
@@ -36,6 +36,10 @@ public class MissionCollect : IMissionCollect
         }
 
         await Task.CompletedTask;
+    }
+
+    public void AddMission(IMission mission){
+        Missions.Add(mission);
     }
 
     public long GetInterval() => Interval;

@@ -11,4 +11,6 @@ public interface IMissionCollect
     void SetInterval(long ms);
     
     Task RunAsync();
+
+    void AddMission(IMission mission);
 }
