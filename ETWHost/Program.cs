@@ -10,6 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IMissionManager, MissionManager>();
 
+var ms = new MissionManager();
+ms.CreateManagerCollection(new MissionEntity(), 1000);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
