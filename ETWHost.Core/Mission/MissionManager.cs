@@ -46,7 +46,10 @@ public class MissionManager : IMissionManager
 
     public void CreateManagerCollection(IMission mission, long ms)
     {
-        _collects.Add(new MissionCollect(mission, ms));
+        var col = new MissionCollect(mission, ms)!;
+        Task.Run(() => col.RunAsync());
+
+        _collects.Add(col);
     }
 
     public void AddMission(int collectIndex, IMission mission){
