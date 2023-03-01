@@ -9,4 +9,9 @@ public class MissionEntity : IMission
         return Task.CompletedTask;
 #endif
     }
+
+    public void Run()
+    {
+        
+    }
 }

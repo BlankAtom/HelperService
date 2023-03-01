@@ -38,6 +38,14 @@ public class MissionCollect : IMissionCollect
         await Task.CompletedTask;
     }
 
+    public void Run()
+    {
+        foreach (var mission in Missions)
+        {
+            mission.Run();
+        }
+    }
+
     public void AddMission(IMission mission){
         Missions.Add(mission);
     }
