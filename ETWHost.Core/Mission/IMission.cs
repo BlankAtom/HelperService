@@ -3,4 +3,6 @@
 public interface IMission
 {
     Task RunAsync();
+
+    void Run();
 }
