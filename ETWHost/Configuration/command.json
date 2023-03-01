@@ -1,0 +1,7 @@
+﻿[{
+  "command": "git",
+  "parameters": "tfs quick-clone http://172.21.0.11/DefaultCollection $/FUNDAMENTAL_UTILITY ./repo"
+},{
+  "command": "echo",
+  "parameters": "123"
+}]
