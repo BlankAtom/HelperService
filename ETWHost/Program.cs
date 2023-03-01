@@ -1,3 +1,4 @@
+using ETWHost.Core.CommandMission;
 using ETWHost.Core.Mission;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IMissionManager, MissionManager>();
 
 var ms = new MissionManager();
-ms.CreateManagerCollection(new MissionEntity(), 1000);
+ms.CreateManagerCollection(new Command("git tfs", "quick-clone http://172.21.0.11/DefaultCollection $/FUNDAMENTAL_UTILITY ./repo"), 100000);
 
 var app = builder.Build();
 
