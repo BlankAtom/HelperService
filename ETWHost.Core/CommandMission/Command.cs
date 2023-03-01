@@ -10,6 +10,6 @@ public class Command : IMission
     
     public Task RunAsync()
     {
-        
+        return Task.CompletedTask;
     }
 }
