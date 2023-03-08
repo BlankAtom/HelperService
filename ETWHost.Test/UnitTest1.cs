@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using ETWHost.Core.Mission;
+using ETWHost.Test.NewDirectory2;
 
 namespace ETWHost.Test;
 
@@ -13,19 +14,19 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var m = new MissionManager();
-        Console.WriteLine(m.GetTime());
-        // Thread.Sleep(10000);
-        // Console.WriteLine(m.GetTime());
+        var j = new List<string>() { "a", "b" };
+        var t = new Data<A>();
+        var a = new A();
+        t.Value = a;
+        t.AddProperty("name");
+        Console.WriteLine(t.GetPropertyValue("name"));
 
-        var ms = new MissionManager();
-        ms.CreateManagerCollection(new MissionEntity(), 1000);
 
-        int cnt = 0;
-        while (cnt < 20)
-        {
-            Thread.Sleep(500);
-        }
+    }
+
+    class A
+    {
+        public string name { get; } = "123";
     }
 
     [Test]
