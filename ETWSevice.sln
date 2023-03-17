@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETWHost.Core", "ETWHost.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETWHost.Test", "ETWHost.Test\ETWHost.Test.csproj", "{8F10B0A2-1854-4223-BB88-D5639550757C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETWHost.Simple", "ETWHost.Simple\ETWHost.Simple.csproj", "{4B182280-CCF3-4323-96C9-D7755A5D77CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8F10B0A2-1854-4223-BB88-D5639550757C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F10B0A2-1854-4223-BB88-D5639550757C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F10B0A2-1854-4223-BB88-D5639550757C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B182280-CCF3-4323-96C9-D7755A5D77CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B182280-CCF3-4323-96C9-D7755A5D77CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B182280-CCF3-4323-96C9-D7755A5D77CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B182280-CCF3-4323-96C9-D7755A5D77CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Reflection;
+using ETWHost.Core.Helper;
 using ETWHost.Core.Mission;
 
 namespace ETWHost.Test;
@@ -48,5 +50,18 @@ public class Tests
         Console.WriteLine(output);
         process.WaitForExit();
         process.Close();
+    }
+
+    [Test]
+    public void test3()
+    {
+        
+        var assemblies = new List<Assembly>();
+        assemblies.Add(typeof(IMission).Assembly);
+
+        foreach (var assembly in assemblies.GetControllerAssembly())
+        {
+            Console.WriteLine(assembly);
+        }
     }
 }
