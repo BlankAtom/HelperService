@@ -20,4 +20,16 @@
       <ProjectReference Include="..\ETWHost.Core\ETWHost.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="NewDirectory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="NewDirectory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="NewDirectory1\**" />
+    </ItemGroup>
+
 </Project>
